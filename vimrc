@@ -107,7 +107,7 @@ autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
 
 " Pretty colors for fuzzyfinder menus
 highlight Pmenu ctermfg=black ctermbg=gray
-highlight PmenuSel ctermfg=black ctermbg=white
+highlight PmenuSel ctermfg=white ctermbg=green
 
 set laststatus=2
 set statusline=
