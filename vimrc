@@ -79,6 +79,9 @@ map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
 command SudoW w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
+map <LocalLeader>] :tabn<CR>
+map <LocalLeader>[ :tabp<CR>
+map <LocalLeader><CR> :tabnew<CR>
 
 nnoremap <silent> k gk
 nnoremap <silent> j gj
