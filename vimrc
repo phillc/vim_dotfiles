@@ -82,6 +82,17 @@ cnoremap <Tab> <C-L><C-D>
 map <LocalLeader>] :tabn<CR>
 map <LocalLeader>[ :tabp<CR>
 map <LocalLeader><CR> :tabnew<CR>
+map <LocalLeader><LocalLeader> :call MaximizeToggle ()<CR>
+
+function! MaximizeToggle()
+  if exists("g:split_maximized")
+    unlet g:split_maximized
+    :winc =
+  else
+    let g:split_maximized="true"
+    :60winc >
+  endif
+endfunction
 
 nnoremap <silent> k gk
 nnoremap <silent> j gj
