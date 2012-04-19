@@ -90,7 +90,7 @@ function! MaximizeToggle()
     :winc =
   else
     let g:split_maximized="true"
-    :60winc >
+    :exec "vertical resize " . string(floor(&columns * 0.8))
   endif
 endfunction
 
