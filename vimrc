@@ -123,6 +123,9 @@ autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
 highlight Pmenu ctermfg=black ctermbg=gray
 highlight PmenuSel ctermfg=white ctermbg=green
 
+" Tab highlight coloring
+hi TabLineSel ctermbg=green
+
 set laststatus=2
 set statusline=
 set statusline+=%<\                       " cut at start
