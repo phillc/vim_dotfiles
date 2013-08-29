@@ -93,6 +93,20 @@ nmap <silent> <LocalLeader>vs vip<LocalLeader>vs<CR>
 
 command SudoW w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
+map <LocalLeader>] :tabn<CR>
+map <LocalLeader>[ :tabp<CR>
+map <LocalLeader><CR> :tabnew<CR>
+map <LocalLeader><LocalLeader> :call MaximizeToggle ()<CR>
+
+function! MaximizeToggle()
+  if exists("g:split_maximized")
+    unlet g:split_maximized
+    :winc =
+  else
+    let g:split_maximized="true"
+    :exec "vertical resize " . string(floor(&columns * 0.8))
+  endif
+endfunction
 
 nnoremap <silent> k gk
 nnoremap <silent> j gj
@@ -122,7 +136,10 @@ autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
 
 " Pretty colors for fuzzyfinder menus
 highlight Pmenu ctermfg=black ctermbg=gray
-highlight PmenuSel ctermfg=black ctermbg=white
+highlight PmenuSel ctermfg=white ctermbg=green
+
+" Tab highlight coloring
+hi TabLineSel ctermbg=green
 
 set laststatus=2
 set statusline=
