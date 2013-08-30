@@ -136,7 +136,7 @@ autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
 
 " Pretty colors for fuzzyfinder menus
 highlight Pmenu ctermfg=black ctermbg=gray
-highlight PmenuSel ctermfg=white ctermbg=green
+highlight PmenuSel ctermfg=black ctermbg=white
 
 " Tab highlight coloring
 hi TabLineSel ctermbg=green
